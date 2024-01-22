@@ -1,0 +1,27 @@
+.navbar .ant-menu-horizontal{
+    border-bottom: 0px;
+}
+.navbar .ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected{
+    color: black;
+    font-weight: bold;
+   }
+.navbar .ant-menu-item::after{
+    width: 12px !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+}
+.navbar .ant-layout{
+    font-size: 26px;
+}
+.langSelect .ant-select-selector{
+    border: none !important;
+   box-shadow: none !important;
+  }
+.signinbtn:hover{
+background-color: #3A96AB !important;
+}
+.sellAcarBtn:hover{
+    color: #3A96AB !important;
+    border: 1px solid #3A96AB !important;
+    }
