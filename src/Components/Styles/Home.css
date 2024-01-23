@@ -1,0 +1,9 @@
+.advanceFilter .ant-btn.ant-btn-icon-only{
+    width: 100px;
+}
+.SearchBtn{
+   background-color: #1c819d !important;
+}
+.showResults:hover{
+   background-color: #1c819d !important;
+}

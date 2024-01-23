@@ -12,7 +12,7 @@ const AppLayout = () => {
 <Header className='bg-white shadow-md'>
     <Navbar/>
 </Header>
-<Content>
+<Content className='bg-white'>
 <Routes>
 <Route path="/" element={ <Home/> } />
 </Routes>

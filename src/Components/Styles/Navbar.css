@@ -5,6 +5,9 @@
     color: black;
     font-weight: bold;
    }
+.navbar .ant-select-single .ant-select-selector .ant-select-selection-item{
+    padding: 10px;
+   }
 .navbar .ant-menu-item::after{
     width: 12px !important;
     bottom: 20px !important;
