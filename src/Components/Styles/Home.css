@@ -1,3 +1,4 @@
+/* Advancd Filter section css here  */
 .advanceFilter .ant-btn.ant-btn-icon-only{
     width: 100px;
 }
@@ -7,3 +8,21 @@
 .showResults:hover{
    background-color: #1c819d !important;
 }
+
+/* ContactUs part css here  */
+.ContactUs{
+   background: url('icons/Group.svg') !important;
+}
+.social_link_buttons .ant-btn-link{
+   padding-left: 0px !important;
+}
+.social_link_buttons .ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover{
+   color: white !important;
+}
+.social_link_buttons_mobile .ant-btn.ant-btn-icon-only{
+   width: 33%;
+}
+/* .mostWanted .ant-btn.ant-btn-icon-only{
+   width: 180% !important;
+} */
+

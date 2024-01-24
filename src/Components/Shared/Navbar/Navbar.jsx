@@ -70,7 +70,7 @@ const Navbar = () => {
       </div>
 {/* for desktop view   */}
       <div className="navbar hidden md:flex flex-row items-center justify-between gap-4 max-w-[1100px] mx-auto">
-        <div className="text-[20px]">
+        <div className="text-[22px]">
           <img src="./Logo1.svg" alt="logo" />
         </div>
         <Menu
@@ -80,7 +80,7 @@ const Navbar = () => {
           mode="horizontal"
           items={items}
         />
-        <div className="flex flex-row items-center gap-2">
+        <div className="flex flex-row items-center gap-3">
           <Select
             defaultValue="English"
             className="langSelect"
