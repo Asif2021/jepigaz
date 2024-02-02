@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../Styles/Home.css";
 import Typography from "antd/es/typography/Typography";
 import AppButton from "../../Reuseable/Button/Button";
@@ -7,31 +7,37 @@ import { Link } from "react-router-dom";
 import InputSelector from "../../Reuseable/InputSelector";
 
 const AdvanceFilter = () => {
+  const [category, setCategory] = useState("car")
   return (
-    <div className="advanceFilter hidden sm:block border border-solid border-[#E0E6F0] shadow-sm p-4 rounded-md">
+    <div className="advanceFilter hidden md:block border border-solid border-[#E0E6F0] shadow-sm p-4 pt-0 rounded-md">
       <div className="flex flex-col md:flex-row gap-3">
         <div className="w-full md:w-2/4">
           <Typography className="text-lg font-bold  py-3">Category</Typography>
-          <div className="flex gap-3">
+          <div className="grid grid-cols-5 gap-2 md:flex md:flex-row md:gap-3">
             <AppButton
-              icon={<img src="/icons/sports-car.svg" alt="" />}
-              className="h-12"
+              icon={<img src="/icons/sports-car.svg" alt="" style={{color:"red"}}/>}
+              className={category == 'car' ? 'bg-black h-12' : 'h-12'}
+              onClick={()=>setCategory('car')}
             />
             <AppButton
-              icon={<img src="/icons/motorcycle.svg" alt="" />}
-              className="h-12"
+              icon={<img src="/icons/motorcycle.svg" alt=""/>}
+              className={category == 'motorcycle' ? 'bg-black h-12' : 'h-12'}
+              onClick={()=>setCategory('motorcycle')}
             />
             <AppButton
               icon={<img src="/icons/truck.svg" alt="" />}
-              className="h-12"
+              className={category == 'truck' ? 'bg-black h-12 text-white' : 'h-12'}
+              onClick={()=>setCategory('truck')}
             />
             <AppButton
               icon={<img src="/icons/campervan.svg" alt="" />}
-              className="h-12"
+              className={category == 'camprevan' ? 'bg-black h-12 text-white' : 'h-12'}
+              onClick={()=>setCategory('camprevan')}
             />
             <AppButton
               icon={<img src="/icons/caravan.svg" alt="" />}
-              className="h-12"
+              className={category == 'caravan' ? 'bg-black h-12 text-red' : 'h-12'}
+              onClick={()=>setCategory('caravan')}
             />
           </div>
         </div>
@@ -42,10 +48,10 @@ const AdvanceFilter = () => {
               placeholder="Search by name"
               prefix={<img src="/icons/search.svg" alt="" />}
               className="h-12"
-            />
+              />
             <AppButton
               type="primary"
-              className="SearchBtn h-12 bg-[#1c819d] overflow-hidden"
+              className="SearchBtn h-12 bg-[#1c819d]"
               icon={<img src="/icons/searchbtn.svg" alt="" />}
               style={{ width: "50px" }}
             />
@@ -87,7 +93,7 @@ const AdvanceFilter = () => {
           placeholder="Price to"
         />
         <AppButton
-          className="showResults h-12 w-full md:w-[32.5%] bg-[#1c819d] overflow-hidden"
+          className="showResults h-12 w-full md:w-[32.5%] bg-[#1c819d] font-bold text-[15px]"
           type="primary"
           text="Show results"
         />

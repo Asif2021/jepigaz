@@ -8,11 +8,10 @@
 .showResults:hover{
    background-color: #1c819d !important;
 }
-
-/* ContactUs part css here  */
-.ContactUs{
-   background: url('icons/Group.svg') !important;
+.svgIcons > svg{
+    fill: red !important;
 }
+
 .social_link_buttons .ant-btn-link{
    padding-left: 0px !important;
 }
@@ -21,6 +20,9 @@
 }
 .social_link_buttons_mobile .ant-btn.ant-btn-icon-only{
    width: 33%;
+}
+.searchFilterBtn:hover{
+   color: white !important;
 }
 /* .mostWanted .ant-btn.ant-btn-icon-only{
    width: 180% !important;

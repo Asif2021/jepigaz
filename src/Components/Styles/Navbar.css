@@ -27,4 +27,14 @@ background-color: #3A96AB !important;
 .sellAcarBtn:hover{
     color: #3A96AB !important;
     border: 1px solid #3A96AB !important;
-    }
+ }
+ .ant-popover .ant-popover-inner  {
+ padding: 0 !important;
+ padding-right: 12px !important;
+ }
+.left_part{
+    margin-left: 5px !important;
+}
+.ant-typography{
+    margin: 0 !important;
+}

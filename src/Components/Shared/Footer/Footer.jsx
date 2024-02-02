@@ -42,12 +42,12 @@ const AppFooter = () => {
           <div className="flex flex-col gap-2">
             <Typography className="text-[#ffffff99]">lorem ipsum</Typography>
             <Typography className="text-white">
-              {" "}
+           
               Lorem ipsum dolor sit
             </Typography>
             <Typography className="text-white">Lorem ipsum dolor</Typography>
             <Typography className="text-white">
-              {" "}
+           
               Lorem ipsum dolor sit amet
             </Typography>
             <Typography className="text-white">
