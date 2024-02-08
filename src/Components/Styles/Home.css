@@ -28,3 +28,16 @@
    width: 180% !important;
 } */
 
+/* carousel section css here --> */
+ .ant-carousel .slick-dots button{
+   width: 5px !important;
+  }
+ .ant-carousel .slick-dots li {
+   width: 0px !important;
+}
+.slick-dots li button{
+   background-color: white !important;
+}
+.contact-button:hover{
+   color: white !important;
+}

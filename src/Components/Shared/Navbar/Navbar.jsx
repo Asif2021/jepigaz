@@ -153,7 +153,7 @@ const Navbar = () => {
           <AppButton
             type="primary"
             className="signinbtn bg-[#3A96AB] hover:bg-[#3A96AB] w-24 font-[600]"
-            text="Sing in"
+            text="Sign in"
           />
           <AppButton
             className="sellAcarBtn text-[#3A96AB] border-[#3A96AB] font-bold"
