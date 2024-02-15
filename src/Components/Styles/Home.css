@@ -29,15 +29,26 @@
 } */
 
 /* carousel section css here --> */
+.mycarousel .ant-carousel .slick-dots li.slick-active button{
+   background-color: blue !important;
+   width: 8px !important;
+}
  .ant-carousel .slick-dots button{
    width: 5px !important;
-  }
- .ant-carousel .slick-dots li {
-   width: 0px !important;
-}
-.slick-dots li button{
    background-color: white !important;
+   color: white !important;
+   opacity: 1 !important;
+   padding: 2px !important;
+    }
+
+  .mycarousel .ant-carousel .slick-dots li {
+   width: 2px !important;
 }
+
 .contact-button:hover{
    color: white !important;
+}
+
+.svgIcon path{
+   filter: invert(1) !important;
 }

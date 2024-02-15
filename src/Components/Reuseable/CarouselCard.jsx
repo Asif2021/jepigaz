@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Carousel, Divider, Tag, Typography } from "antd";
+import { Carousel, Divider, Flex, Tag, Typography } from "antd";
 import Paragraph from "antd/es/typography/Paragraph";
 import AppButton from "./Button/Button";
 
-const CarouselCard = () => {
+const CarouselCard = (data) => {
   const [heartFilled, setHeartFilled] = useState(false);
+  const {id, title, varient, year, type, milage, priceLowered, price, lowprice, imageSource } = data
 
   const onChange = (currentSlide) => {
     console.log(currentSlide);
@@ -12,8 +13,8 @@ const CarouselCard = () => {
 
   return (
     <>
-      <div className="mycarousel, relative border border-solid shadow-md rounded-md border-[#E0E6F0] overflow-hidden pb-3">
-        <Carousel afterChange={onChange} className="carouselCard">
+      <div className="mycarousel relative border border-solid shadow-md rounded-md border-[#E0E6F0] overflow-hidden pb-3">
+        <Carousel afterChange={onChange} className="carouselCard cursor-pointer">
           <div className="rounded-md">
             <img
               src="./images/image1.png"
@@ -43,60 +44,54 @@ const CarouselCard = () => {
             />
           </div>
         </Carousel>
-        <div className="flex flex-col absolute right-1 top-1 gap-3">
-          {heartFilled ? (
-            <span className="bg-neutral-800 rounded-full flex justify-center items-center">
-            <img
-                src="./icons/heartfilled.svg"
-                alt="heart"
-                onClick={() => setHeartFilled(!heartFilled)}
-              />
-            </span>
-          ) : (
-            <span className="bg-neutral-800 rounded-full flex justify-center items-center">
-            <img
-                src="./icons/heart.svg"
+        <div className="flex flex-col absolute right-1 top-1 gap-1">
+          {heartFilled ? (<span className="bg-slate-700 bg-opacity-65 w-8 rounded-full h-8  flex justify-center items-center">
+            <img src="./icons/heartfilled.svg" alt="heart" onClick={() => setHeartFilled(!heartFilled)}/></span>) :
+            (<span className="bg-slate-700 bg-opacity-65 h-8 w-8 rounded-full flex justify-center items-center"> <img src="./icons/heart.svg"
                 alt="heart"
                 onClick={() => setHeartFilled(!heartFilled)}
               />
             </span>
           )}
 
-          <span className="bg-neutral-800 p-1 rounded-full">
-          
+          <span className="bg-slate-700 bg-opacity-65 rounded-full h-8 w-8 flex justify-center items-center">
             <img src="./icons/share-2.svg" alt="share" />
           </span>
         </div>
-        <div className="flex flex-row justify-between items-center px-2 py-2">
-          <Typography className="font-bold text-xs md:text-base">
-            Mercedez-BenzA 180
+        
+        <div className="flex flex-row justify-between items-center px-2 py-2 gap-[1px]">
+          <Typography className="font-bold text-xs md:text-sm">
+           {title}
           </Typography>
           <Paragraph
             ellipsis
             symbol=".."
             className="font-semibold text-xs md:text-sm"
           >
-            Classe A - V1
+           {varient}
           </Paragraph>
         </div>
-        <div className="flex flex-row items-center w-11 px-2 pb-2">
-          <span className="">2023</span>
+        <div className=" px-2 font-semibold pb-2 text-[#4F5968]">
+          <span className="inline-flex">{year}</span>
           <Divider type="vertical" />
-          <span>Disele</span>
+          <span className="inline-flex">{type}</span>
           <Divider type="vertical" />
-          <span>99,999km</span>
+          <span className="inline-flex">{milage}</span>
         </div>
-        <Tag className="mx-2 bg-violet-300 rounded-lg mb-2 text-violet-900">
-          Price lowered
-        </Tag>
+        {priceLowered ? <Tag className="mx-2 bg-[#F2F8F9] rounded-lg mb-2 text-[#61B4E7] border-none font-bold">
+        price lowered
+        </Tag> : ""  }
+        
         <div className="flex flex-row justify-between items-center px-2">
-          <span className="flex justify-start">
-            <Typography className="font-bold text-lg">$64987</Typography>
-            <Typography className="line-through text-base">$64987</Typography>
+          <span className="flex justify-start items-center">
+            <Typography className="font-bold text-xs md:text-lg"> ${price}</Typography>
+            {
+            priceLowered ? <Typography className="line-through text-xs md:text-base">${lowprice}</Typography>: ""
+            }
           </span>
           <AppButton
             text="Contact"
-            className="contact-button hover:bg-[#1c819d] border-solid border-[#1c819d] text-[#1c819d] hover:text-white font-semibold"
+            className="contact-button hover:bg-[#1c819d] border-solid border-[#1c819d] text-[#1c819d] hover:text-white font-semibold hidden md:block"
           />
         </div>
       </div>

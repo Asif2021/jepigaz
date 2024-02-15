@@ -15,25 +15,21 @@ const AdvanceFilter = () => {
           <Typography className="text-lg font-bold  py-3">Category</Typography>
           <div className="grid grid-cols-5 gap-2 md:flex md:flex-row md:gap-3">
             <AppButton
-              icon={<img src="/icons/sports-car.svg" alt="" style={{color:"red"}}/>}
+              icon={category == 'car' ? <img src="/icons/sports-car2.svg" alt=""/> : <img src="/icons/sports-car.svg" alt=""/>}
               className={category == 'car' ? 'bg-black h-12' : 'h-12'}
-              onClick={()=>setCategory('car')}
-            />
+              onClick={()=>setCategory('car')}/>
             <AppButton
-              icon={<img src="/icons/motorcycle.svg" alt=""/>}
+              icon={category == 'motorcycle' ? <img src="/icons/motorcycle2.svg" alt=""/> :<img src="/icons/motorcycle.svg" alt="motorcycle"/>}
               className={category == 'motorcycle' ? 'bg-black h-12' : 'h-12'}
-              onClick={()=>setCategory('motorcycle')}
-            />
+              onClick={()=>setCategory('motorcycle')}/>
             <AppButton
               icon={<img src="/icons/truck.svg" alt="" />}
-              className={category == 'truck' ? 'bg-black h-12 text-white' : 'h-12'}
-              onClick={()=>setCategory('truck')}
-            />
+              className={category == 'truck' ? 'bg-black h-12 text-white' : 'h-12 '}
+              onClick={()=>setCategory('truck')}/>
             <AppButton
               icon={<img src="/icons/campervan.svg" alt="" />}
               className={category == 'camprevan' ? 'bg-black h-12 text-white' : 'h-12'}
-              onClick={()=>setCategory('camprevan')}
-            />
+              onClick={()=>setCategory('camprevan')}/>
             <AppButton
               icon={<img src="/icons/caravan.svg" alt="" />}
               className={category == 'caravan' ? 'bg-black h-12 text-red' : 'h-12'}

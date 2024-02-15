@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Mercedez-BenzA 180",
+        "varient": " Classe A - V1",
+        "year": "2023",
+        "type": "Disele",
+        "milage": "99,999km",
+        "priceLowered":true,
+        "price":"64987",
+        "lowprice":"64234",
+        "imageSource": "./images/image1.png"
+    },
+    {
+        "id": 2,
+        "title": "Mercedez-BenzA 180",
+        "varient": " Classe A - V1",
+        "year": "2023",
+        "type": "Disele",
+        "milage": "99,999km",
+        "priceLowered":true,
+        "price":"64987",
+        "lowprice":"64234",
+        "imageSource": "./images/image1.png"
+    },
+    {
+        "id": 3,
+        "title": "Mercedez-BenzA 180",
+        "varient": " Classe A - V1",
+        "year": "2023",
+        "type": "Disele",
+        "milage": "99,999km",
+        "priceLowered":true,
+        "price":"64987",
+        "lowprice":"64234",
+        "imageSource": "./images/image1.png"
+    },
+    {
+        "id": 4,
+        "title": "Mercedez-BenzA 180",
+        "varient": " Classe A - V1",
+        "year": "2023",
+        "type": "Disele",
+        "milage": "99,999km",
+        "priceLowered":false,
+        "price":"64987",
+        "lowprice":"64234",
+        "imageSource": "./images/image1.png"
+    }
+]

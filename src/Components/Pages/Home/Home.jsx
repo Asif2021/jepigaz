@@ -5,6 +5,7 @@ import ContactUs from "./ContactUs";
 import MostWantedCat from "./MostWantedCat";
 import AppButton from "../../Reuseable/Button/Button";
 import CarouselCard from "../../Reuseable/CarouselCard";
+import cardata from "../../../../cardata.json"
 
 const Home = () => {
   return (
@@ -20,11 +21,14 @@ const Home = () => {
       </div>
       <Typography className='text-black text-xl font-semibold'>Newsest Cars</Typography>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-3">
-          <CarouselCard/>
-          <CarouselCard/>
-          <CarouselCard/>
-          <CarouselCard/>
-      </div>
+        {cardata.map((data)=>{
+  const {id, title, varient, year, type, milage, priceLowered, price, lowprice, imageSource } = data
+
+          return <div key={id}>
+            <CarouselCard id={id} title={title} varient={varient} year={year} type={type} milage={milage} priceLowered={priceLowered} price={price} lowprice={lowprice} imageSource={imageSource} />
+          </div>
+        })}
+         </div>
     </div>
   );
 };
