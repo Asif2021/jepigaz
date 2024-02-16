@@ -49,6 +49,6 @@
    color: white !important;
 }
 
-.svgIcon path{
-   filter: invert(1) !important;
+.colorchange{
+   filter: brightness(250%) !important;
 }

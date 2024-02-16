@@ -24,11 +24,11 @@ const AdvanceFilter = () => {
               onClick={()=>setCategory('motorcycle')}/>
             <AppButton
               icon={<img src="/icons/truck.svg" alt="" />}
-              className={category == 'truck' ? 'bg-black h-12 text-white' : 'h-12 '}
+              className={category == 'truck' ? 'bg-black h-12 colorchange' : 'h-12 '}
               onClick={()=>setCategory('truck')}/>
             <AppButton
               icon={<img src="/icons/campervan.svg" alt="" />}
-              className={category == 'camprevan' ? 'bg-black h-12 text-white' : 'h-12'}
+              className={category == 'camprevan' ? 'bg-black h-12 colorchange' : 'h-12'}
               onClick={()=>setCategory('camprevan')}/>
             <AppButton
               icon={<img src="/icons/caravan.svg" alt="" />}
