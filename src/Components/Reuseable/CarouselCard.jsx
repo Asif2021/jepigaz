@@ -14,35 +14,15 @@ const CarouselCard = (data) => {
   return (
     <>
       <div className="mycarousel relative border border-solid shadow-md rounded-md border-[#E0E6F0] overflow-hidden pb-3">
-        <Carousel afterChange={onChange} className="carouselCard cursor-pointer">
-          <div className="rounded-md">
-            <img
-              src="./images/image1.png"
-              alt="image"
-              className="flex w-full"
-            />
-          </div>
-          <div>
-            <img
-              src="./images/image2.png"
-              alt="image"
-              className="flex w-full"
-            />
-          </div>
-          <div>
-            <img
-              src="./images/image3.png"
-              alt="image"
-              className="flex w-full"
-            />
-          </div>
-          <div>
-            <img
-              src="./images/image4.png"
-              alt="image"
-              className="flex w-full"
-            />
-          </div>
+        <Carousel afterChange={onChange} className="carouselCard cursor-pointer" >
+       
+      {imageSource.map((image) => (
+        <div key={id}>
+          <img src={image} alt={image}  className="flex w-full" />
+        </div>
+      ))}
+    
+          
         </Carousel>
         <div className="flex flex-col absolute right-1 top-1 gap-1">
           {heartFilled ? (<span className="bg-slate-700 bg-opacity-65 w-8 rounded-full h-8  flex justify-center items-center">

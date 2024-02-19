@@ -25,7 +25,7 @@ const Home = () => {
   const {id, title, varient, year, type, milage, priceLowered, price, lowprice, imageSource } = data
 
           return <div key={id}>
-            <CarouselCard id={id} title={title} varient={varient} year={year} type={type} milage={milage} priceLowered={priceLowered} price={price} lowprice={lowprice} imageSource={imageSource} />
+            <CarouselCard cardata={data} id={id} title={title} varient={varient} year={year} type={type} milage={milage} priceLowered={priceLowered} price={price} lowprice={lowprice} imageSource={imageSource} />
           </div>
         })}
          </div>
