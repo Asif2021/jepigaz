@@ -21,9 +21,9 @@
         "year": "2023",
         "type": "Disele",
         "milage": "99,999km",
-        "priceLowered":true,
+        "priceLowered":false,
         "price":"64987",
-        "lowprice":"64234",
+        "bestPrice":true,
         "imageSource": ["./images/image5.png",
         "./images/image6.png",
         "./images/image7.png",
@@ -54,12 +54,13 @@
         "priceLowered":false,
         "price":"64987",
         "lowprice":"64234",
+        "topsearch":true,
         "imageSource": ["./images/image5.png",
         "./images/image6.png",
         "./images/image7.png",
         "./images/image8.png"]
     },     {
-        "id": 3,
+        "id": 5,
         "title": "Mercedez-BenzA 180",
         "varient": " Classe A - V1",
         "year": "2023",
@@ -74,7 +75,7 @@
         "./images/image4.png"]
     },
     {
-        "id": 4,
+        "id": 6,
         "title": "Mercedez-BenzA 180",
         "varient": " Classe A - V1",
         "year": "2023",
@@ -88,7 +89,7 @@
         "./images/image7.png",
         "./images/image8.png"]
     },    {
-        "id": 3,
+        "id": 7,
         "title": "Mercedez-BenzA 180",
         "varient": " Classe A - V1",
         "year": "2023",
@@ -103,7 +104,7 @@
         "./images/image4.png"]
     },
     {
-        "id": 4,
+        "id": 8,
         "title": "Mercedez-BenzA 180",
         "varient": " Classe A - V1",
         "year": "2023",
@@ -117,7 +118,7 @@
         "./images/image7.png",
         "./images/image8.png"]
     },    {
-        "id": 3,
+        "id": 9,
         "title": "Mercedez-BenzA 180",
         "varient": " Classe A - V1",
         "year": "2023",
@@ -132,7 +133,7 @@
         "./images/image4.png"]
     },
     {
-        "id": 4,
+        "id": 10,
         "title": "Mercedez-BenzA 180",
         "varient": " Classe A - V1",
         "year": "2023",
@@ -146,7 +147,7 @@
         "./images/image7.png",
         "./images/image8.png"]
     },    {
-        "id": 3,
+        "id": 11,
         "title": "Mercedez-BenzA 180",
         "varient": " Classe A - V1",
         "year": "2023",
@@ -161,7 +162,7 @@
         "./images/image4.png"]
     },
     {
-        "id": 4,
+        "id": 12,
         "title": "Mercedez-BenzA 180",
         "varient": " Classe A - V1",
         "year": "2023",

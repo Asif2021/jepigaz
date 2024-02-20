@@ -24,6 +24,12 @@
 .searchFilterBtn:hover{
    color: white !important;
 }
+.showAllLink{
+   color: #1c819d !important;
+}
+.showAllLink:hover{
+   color: #1c819d !important;
+}
 /* .mostWanted .ant-btn.ant-btn-icon-only{
    width: 180% !important;
 } */
