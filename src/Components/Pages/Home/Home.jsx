@@ -48,7 +48,7 @@ const Home = () => {
          <Divider type="horizontal" />
          <div className="flex justify-between">
       <Typography className='text-black text-xl font-semibold'>Most wanted</Typography>
-      <Link className="showAllLink flex items-center gap-2 font-semibold text-lg">Show all <img src="./icons/arrow-right.svg" alt="right" /></Link>
+      <Link className="showAllLink flex items-center gap-2 text-[#1c819d] font-semibold text-lg">Show all <img src="./icons/arrow-right.svg" alt="right" /></Link>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-3">
         {cardata.slice(0,showData2).map((data)=>{

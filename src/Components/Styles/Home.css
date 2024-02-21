@@ -58,3 +58,6 @@
 .colorchange{
    filter: brightness(250%) !important;
 }
+.caravan path{
+   fill: red !important;
+}

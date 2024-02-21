@@ -5,6 +5,8 @@ import AppButton from "../../Reuseable/Button/Button";
 import InputField from "../../Reuseable/InputField";
 import { Link } from "react-router-dom";
 import InputSelector from "../../Reuseable/InputSelector";
+import Caravan from "../../Reuseable/icons/Caravan";
+// import { ReactComponent as CaravanIcon } from '/icons/caravan.svg';
 
 const AdvanceFilter = () => {
   const [category, setCategory] = useState("car")
@@ -31,10 +33,9 @@ const AdvanceFilter = () => {
               className={category == 'camprevan' ? 'bg-black h-12 colorchange' : 'h-12'}
               onClick={()=>setCategory('camprevan')}/>
             <AppButton
-              icon={<img src="/icons/caravan.svg" alt="" />}
-              className={category == 'caravan' ? 'bg-black h-12 text-red' : 'h-12'}
-              onClick={()=>setCategory('caravan')}
-            />
+              icon={<Caravan fillColor={category === 'caravan' ? "#fff": "#90A3C4"}/>} // Use inline SVG and conditionally apply CSS class
+              className={category === 'caravan' ? 'bg-black h-12' : 'h-12'}
+              onClick={() => setCategory('caravan')}/>
           </div>
         </div>
         <div className="w-full md:w-2/4">

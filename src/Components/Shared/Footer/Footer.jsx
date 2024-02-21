@@ -28,7 +28,7 @@ const AppFooter = () => {
             />
           </Flex>
         </div>
-        <Flex className="flex justify-between w-3/4 md:pl-4 md:mr-32">
+        <div className="grid grid-cols-2 md:grid-cols-3 w-full md:w-3/4 md:pl-8">
           <div className="hidden md:flex flex-col gap-2">
             <Typography className="text-[#ffffff99]">lorem ipsum</Typography>
             <Typography className="text-white">Lorem ipsum dolor</Typography>
@@ -64,7 +64,7 @@ const AppFooter = () => {
               Lorem ipsum dolor sit amet
             </Typography>
           </div>
-        </Flex>
+        </div>
       </div>
       <div className="hidden md:flex justify-center">
         <Divider className="border-[#ffffff33]" />
