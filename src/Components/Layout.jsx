@@ -4,6 +4,8 @@ import Navbar from "./Shared/Navbar/Navbar";
 import { Footer, Header, Content } from "antd/es/layout/layout";
 import AppFooter from "./Shared/Footer/Footer";
 import Home from "./Pages/Home/Home";
+import Favourites from "./Pages/Favourites/Favourites";
+import AdvanceSearch from "./Pages/AdvanceSearch/AdvanceSearch";
 import { Routes, Route } from "react-router-dom";
 
 const AppLayout = () => {
@@ -15,6 +17,8 @@ const AppLayout = () => {
       <Content className="bg-white mt-2 mb-4 max-w-[1100px] mx-auto px-4 rounded-sm">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/favourites" element={<Favourites />} />
+          <Route path="/advance-search" element={<AdvanceSearch />} />
         </Routes>
       </Content>
       <Footer className="p-0 bg-black md:px-12">

@@ -7,16 +7,16 @@ const InputSelector = ({options, placeholder, className, onChange, defaultValue,
     // showSearch
     className={className}
     placeholder={placeholder}
-    optionFilterProp='children'
+    // optionFilterProp='children'
     suffixIcon={<img src="icons/chevron-down.svg" alt="" />}
-    filterOption={(input, option) => (option?.label ?? '').includes(input)}
-    filterSort={(optionA, optionB) =>
-      (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
-    }
-    value={value}
-    options={options}
-    onChange={onChange}
-    defaultValue={defaultValue}
+    // filterOption={(input, option) => (option?.label ?? '').includes(input)}
+    // filterSort={(optionA, optionB) =>
+    //   (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
+    // }
+    // value={value}
+    // options={options}
+    // onChange={onChange}
+    // defaultValue={defaultValue}
   />
   )
 }
