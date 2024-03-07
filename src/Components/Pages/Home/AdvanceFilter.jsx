@@ -58,7 +58,7 @@ const AdvanceFilter = () => {
       </div>
       <div className="flex justify-between py-3">
         <Typography className="text-xl font-bold">Filter</Typography>
-        <Link to={navigate("/advance-search")} className="hidden text-lg font-medium sm:flex" style={{ color: "#1C819D" }}>
+        <Link to="/advance-search" className="hidden text-lg font-medium sm:flex" style={{ color: "#1C819D" }}>
           Advanced search
           <img src="/icons/arrow-right.svg" alt="" className="ml-2" />
         </Link>
