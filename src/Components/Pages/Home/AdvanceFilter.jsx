@@ -6,10 +6,11 @@ import InputField from "../../Reuseable/InputField";
 import { Link } from "react-router-dom";
 import InputSelector from "../../Reuseable/InputSelector";
 import Caravan from "../../Reuseable/icons/Caravan";
-// import { ReactComponent as CaravanIcon } from '/icons/caravan.svg';
+import { useNavigate } from "react-router-dom";
 
 const AdvanceFilter = () => {
-  const [category, setCategory] = useState("car")
+  const [category, setCategory] = useState("car");
+  const navigate = useNavigate();
   return (
     <div className="advanceFilter hidden md:block border border-solid border-[#E0E6F0] shadow-sm p-4 pt-0 rounded-md">
       <div className="flex flex-col md:flex-row gap-3">
@@ -33,7 +34,7 @@ const AdvanceFilter = () => {
               className={category == 'camprevan' ? 'bg-black h-12 colorchange' : 'h-12'}
               onClick={()=>setCategory('camprevan')}/>
             <AppButton
-              icon={<Caravan fillColor={category === 'caravan' ? "#fff": "#90A3C4"}/>} // Use inline SVG and conditionally apply CSS class
+              icon={<Caravan fillColor={category === 'caravan' ? "#fff": "#90A3C4"}/>} 
               className={category === 'caravan' ? 'bg-black h-12' : 'h-12'}
               onClick={() => setCategory('caravan')}/>
           </div>
@@ -57,7 +58,7 @@ const AdvanceFilter = () => {
       </div>
       <div className="flex justify-between py-3">
         <Typography className="text-xl font-bold">Filter</Typography>
-        <Link className="hidden text-lg font-medium sm:flex" style={{ color: "#1C819D" }}>
+        <Link to={navigate("/advance-search")} className="hidden text-lg font-medium sm:flex" style={{ color: "#1C819D" }}>
           Advanced search
           <img src="/icons/arrow-right.svg" alt="" className="ml-2" />
         </Link>
