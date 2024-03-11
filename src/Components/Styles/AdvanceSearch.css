@@ -1,0 +1,60 @@
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #070707 !important;
+    border-color: #070707 !important;
+  }
+
+.resultButton:hover{
+color: white !important;
+}
+.belge .ant-checkbox-checked .ant-checkbox-inner{
+ background-color: rgb(240, 145, 43) !important;   
+ border-color: beige !important;
+}
+.blue .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: blue !important;
+    border-color: blue !important;
+}
+.brown .ant-checkbox-checked .ant-checkbox-inner{
+background-color: brown !important ;
+border-color: brown !important ;
+}
+.bronze .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: #CD7F32 !important ;
+    border-color: #CD7F32 !important ;
+}
+.yellow .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: yellow !important ;
+    border-color: yellow !important ;
+}
+.grey .ant-checkbox-checked .ant-checkbox-inner{
+background-color: grey !important;
+border-color: grey !important;
+}
+.green .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: green !important;
+    border-color: green !important;
+}
+.red .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: red !important;
+    border-color: red !important;
+}
+.silver .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: silver !important;
+    border-color: silver !important;
+}
+.violet .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: violet !important;
+    border-color: violet !important;
+}
+.white .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: white !important;
+    border-color: white !important;
+}
+.orange .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: orange !important;
+    border-color: orange !important;
+}
+.gold .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: gold !important;
+    border-color: gold !important;
+}
