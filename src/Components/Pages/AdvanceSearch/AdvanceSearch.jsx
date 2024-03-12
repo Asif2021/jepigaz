@@ -57,6 +57,18 @@ const handleLessComponent = ()=>{
           // icon={<img src="./icons/plus.svg" alt="Plus" />}
           text="Less makes/models"
           className="flex items-center float-end p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/> :
+          (components.length ===2) ? <div>
+            <AppButton
+          onClick={handleLessComponent}
+          // icon={<img src="./icons/plus.svg" alt="Plus" />}
+          text="Less makes/models"
+          className="flex items-center float-end p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
+           <AppButton
+          onClick={handleAddComponent}
+          icon={<img src="./icons/plus.svg" alt="Plus" />}
+          text="Add more makes/models"
+          className="flex items-center p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
+          </div> :
           <AppButton
           onClick={handleAddComponent}
           icon={<img src="./icons/plus.svg" alt="Plus" />}
@@ -93,7 +105,7 @@ const handleLessComponent = ()=>{
               <InputSelector placeholder="From" className="h-10 w-[48%]" />
               <InputSelector placeholder="To" className="h-10 w-[48%]" />
             </div>
-            <Slider defaultValue={30} tooltip={{ open: true }} />
+            <Slider  range  defaultValue={[20, 50]} tooltip={{ open: false }} />
           </div>
 
           <div className="w-full md:w-1/2">
@@ -102,7 +114,7 @@ const handleLessComponent = ()=>{
               <InputSelector placeholder="From" className="h-10 w-[48%]" />
               <InputSelector placeholder="To" className="h-10 w-[48%]" />
             </div>
-            <Slider defaultValue={30} tooltip={{ open: true }} />
+            <Slider range  defaultValue={[20, 50]} tooltip={{ open: false }} />
           </div>
         </div>
       </div>
