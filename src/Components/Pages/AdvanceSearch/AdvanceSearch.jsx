@@ -7,12 +7,25 @@ import { Select } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Slider } from "antd";
 import { Checkbox } from "antd";
+import CarComponent from "./CarComponent";
 
 const AdvanceSearch = () => {
   const navigate = useNavigate();
   const [bgcolor, setBgcolor] = useState("All");
   const [seller, setSeller] = useState("All");
   const [preOwner, setPreOwner] = useState("All");
+  const [components, setComponents] = useState([CarComponent]); 
+
+
+const handleAddComponent = () => {
+  setComponents([...components, CarComponent]) 
+}
+
+const handleLessComponent = ()=>{
+  setComponents([CarComponent]) 
+}
+
+
   return (
     <div>
       <div className="flex justify-between items-center py-5">
@@ -27,27 +40,31 @@ const AdvanceSearch = () => {
         </Typography>
         <AppButton
           text="Reject all"
-          className="text-red-600 text-base font-bold border-none hover:text-red-600 shadow-none overflow-hidden"
-        />
-      </div>
-      {/* first div start here  */}
+          className="text-red-600 text-base font-bold border-none hover:text-red-600 shadow-none overflow-hidden"/>
+          </div>
+
+      {/* first part of the page starts here  */}
       <div className="max-w-[750px] mx-auto">
         <Typography className="font-bold uppercase">Car</Typography>
-        <div className="flex flex-col md:flex-row gap-3 my-3">
-          <InputSelector placeholder="Make" className="h-10 w-full md:w-1/3" />
-          <InputSelector placeholder="Model" className="h-10 w-full md:w-1/3" />
-          <Select
-            placeholder="Variant"
-            className="h-10 w-full md:w-1/3"
-            suffixIcon={null}
-          />
-        </div>
-        <AppButton
+
+        {/* adding car component on button click */}
+       {components.slice(0,3).map((item, i) => ( 
+        <CarComponent key={i}/> ))}
+
+       {/* switching add & less buttons on condition */}
+          {(components.length===3) ? <AppButton
+          onClick={handleLessComponent}
+          // icon={<img src="./icons/plus.svg" alt="Plus" />}
+          text="Less makes/models"
+          className="flex items-center float-end p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/> :
+          <AppButton
+          onClick={handleAddComponent}
           icon={<img src="./icons/plus.svg" alt="Plus" />}
           text="Add more makes/models"
-          className="flex items-center p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"
-        />
-
+          className="flex items-center p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
+          }
+        
+        
         <div className="flex flex-col md:flex-row w-full my-5 gap-3">
           <div className="w-full md:w-1/3 gap-3">
             <Typography className="uppercase font-bold">

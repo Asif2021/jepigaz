@@ -6,6 +6,8 @@ import AppFooter from "./Shared/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import Favourites from "./Pages/Favourites/Favourites";
 import AdvanceSearch from "./Pages/AdvanceSearch/AdvanceSearch";
+import Info from "./Pages/Info/Info";
+import Partners from "./Pages/Partners/Partners";
 import { Routes, Route } from "react-router-dom";
 
 const AppLayout = () => {
@@ -14,10 +16,12 @@ const AppLayout = () => {
       <Header className="bg-white shadow-md py-0 h-[46px] md:h-auto px-3 md:p-0">
         <Navbar />
       </Header>
-      <Content className="bg-white mt-2 mb-4 max-w-[1100px] mx-auto px-4 rounded-sm">
+      <Content className="bg-white mt-2 max-w-[1100px] mx-auto px-4 rounded-sm">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/favourites" element={<Favourites />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/partners" element={<Partners />} />
           <Route path="/advance-search" element={<AdvanceSearch />} />
         </Routes>
       </Content>
