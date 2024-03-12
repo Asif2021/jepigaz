@@ -8,10 +8,14 @@ import CarouselCard from "../../Reuseable/CarouselCard";
 import cardata from "../../../../cardata.json"
 import { Button, Divider } from "antd";
 import Link from "antd/es/typography/Link";
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
   const [showData, setShowData] = useState(4);
   const [showData2, setShowData2] = useState(4);
+  const navigate = useNavigate();
+
 
   const handleShowMore = () => {
     setShowData(showData + 4);
@@ -25,7 +29,7 @@ const Home = () => {
       <Typography className="text-3xl font-bold py-3">
         New & Used Cars
       </Typography>
-      <AppButton text="Start search" className="searchFilterBtn block md:hidden w-full h-12 text-lg font-bold text-white hover:text-white bg-[#1c819d] my-3"/>
+      <AppButton text="Start search" onClick={()=>{navigate("/advance-search")}} className="searchFilterBtn block md:hidden w-full h-12 text-lg font-bold text-white hover:text-white bg-[#1c819d] my-3"/>
       <AdvanceFilter />
       <div className="flex flex-col-reverse md:flex-row my-5 gap-5 py-5">
         <ContactUs />

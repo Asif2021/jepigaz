@@ -16,7 +16,7 @@ const AdvanceSearch = () => {
   return (
     <div>
       <div className="flex justify-between items-center py-5">
-        <Typography className="text-3xl font-bold">
+        <Typography className="text-lg md:text-3xl font-bold flex items-center">
           <img
             src="./icons/arrow-left.svg"
             alt="arrowLeft"
@@ -310,7 +310,7 @@ const AdvanceSearch = () => {
         <Typography className="font-bold uppercase pt-10">
           Vehicle condition
         </Typography>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           <Checkbox className="my-checkbox">New</Checkbox>
           <Checkbox>Used</Checkbox>
           <Checkbox>Employess Car</Checkbox>
