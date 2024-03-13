@@ -13,9 +13,9 @@ const InputSelector = ({options, placeholder, className, onChange, defaultValue,
     // filterSort={(optionA, optionB) =>
     //   (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
     // }
-    // value={value}
+    value={value}
     // options={options}
-    // onChange={onChange}
+    onChange={onChange}
     // defaultValue={defaultValue}
   />
   )

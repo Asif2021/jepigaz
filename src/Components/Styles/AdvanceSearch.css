@@ -64,3 +64,11 @@ border-color: grey !important;
 .ant-slider .ant-slider-handle::after{
     box-shadow: 0 0 0 5px #000 !important;
 }
+.ant-tooltip .ant-tooltip-inner{
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+}
+.ant-tooltip{
+    --antd-arrow-background-color: transparent !important;
+}

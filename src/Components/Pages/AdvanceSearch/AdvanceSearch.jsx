@@ -15,6 +15,7 @@ const AdvanceSearch = () => {
   const [seller, setSeller] = useState("All");
   const [preOwner, setPreOwner] = useState("All");
   const [components, setComponents] = useState([CarComponent]); 
+  const [sliderValue, setsliderValue] = useState(1);
 
 
 const handleAddComponent = () => {
@@ -23,6 +24,9 @@ const handleAddComponent = () => {
 
 const handleLessComponent = ()=>{
   setComponents([CarComponent]) 
+}
+const handleSliderChange = (newvalue)=>{
+  setsliderValue(newvalue)
 }
 
 
@@ -102,10 +106,11 @@ const handleLessComponent = ()=>{
           <div className="w-full md:w-1/2">
             <Typography className="uppercase font-bold">price</Typography>
             <div className="flex justify-between">
-              <InputSelector placeholder="From" className="h-10 w-[48%]" />
-              <InputSelector placeholder="To" className="h-10 w-[48%]" />
+              <InputSelector placeholder="From" className="h-10 w-[48%]" value={sliderValue}
+          onChange={handleSliderChange} />
+              <InputSelector placeholder="To" className="h-10 w-[48%]"  />
             </div>
-            <Slider  range  defaultValue={[20, 50]} tooltip={{ open: false }} />
+            <Slider min={0} max={1}  onChange={handleSliderChange} value={typeof inputValue === 'number' ? inputValue : 0}  step={0.01} tooltip={{ open: true, placement:'bottom' }}  />
           </div>
 
           <div className="w-full md:w-1/2">
@@ -114,7 +119,7 @@ const handleLessComponent = ()=>{
               <InputSelector placeholder="From" className="h-10 w-[48%]" />
               <InputSelector placeholder="To" className="h-10 w-[48%]" />
             </div>
-            <Slider range  defaultValue={[20, 50]} tooltip={{ open: false }} />
+            <Slider range  defaultValue={[20, 50]} tooltip={{ open: true, placement:'bottom' }} />
           </div>
         </div>
       </div>
