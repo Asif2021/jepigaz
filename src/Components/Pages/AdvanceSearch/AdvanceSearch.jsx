@@ -15,19 +15,23 @@ const AdvanceSearch = () => {
   const [seller, setSeller] = useState("All");
   const [preOwner, setPreOwner] = useState("All");
   const [components, setComponents] = useState([CarComponent]); 
-  const [sliderValue, setsliderValue] = useState(1);
-
+  const [value, setValue] = useState([1800, 3500]);
+  const [value2, setValue2] = useState([0, 10000]);
+  
 
 const handleAddComponent = () => {
   setComponents([...components, CarComponent]) 
 }
-
 const handleLessComponent = ()=>{
   setComponents([CarComponent]) 
 }
-const handleSliderChange = (newvalue)=>{
-  setsliderValue(newvalue)
-}
+
+const start = "$ " + value[0];
+const end = "$ " + value[value.length - 1];
+
+const start2 =  value2[0] + " km";
+const end2 = value2[value2.length - 1] + " km";
+
 
 
   return (
@@ -106,20 +110,22 @@ const handleSliderChange = (newvalue)=>{
           <div className="w-full md:w-1/2">
             <Typography className="uppercase font-bold">price</Typography>
             <div className="flex justify-between">
-              <InputSelector placeholder="From" className="h-10 w-[48%]" value={sliderValue}
-          onChange={handleSliderChange} />
-              <InputSelector placeholder="To" className="h-10 w-[48%]"  />
+              <InputSelector placeholder="From" className="h-10 w-[48%]" value={start}
+           />
+              <InputSelector placeholder="To" className="h-10 w-[48%]" value={end} />
             </div>
-            <Slider min={0} max={1}  onChange={handleSliderChange} value={typeof inputValue === 'number' ? inputValue : 0}  step={0.01} tooltip={{ open: true, placement:'bottom' }}  />
+            <Slider min={1000} max={5000} range defaultValue={value} 
+            onChange={setValue} tooltip={{ open: true, placement:'bottom' }}  />
           </div>
 
           <div className="w-full md:w-1/2">
             <Typography className="uppercase font-bold">Mileage</Typography>
             <div className="flex justify-between">
-              <InputSelector placeholder="From" className="h-10 w-[48%]" />
-              <InputSelector placeholder="To" className="h-10 w-[48%]" />
+              <InputSelector placeholder="From" className="h-10 w-[48%]"  value={start2} />
+              <InputSelector placeholder="To" className="h-10 w-[48%]" value={end2} />
             </div>
-            <Slider range  defaultValue={[20, 50]} tooltip={{ open: true, placement:'bottom' }} />
+            <Slider min={0} max={30000} range defaultValue={value2}
+                  onChange={setValue2}  tooltip={{ open: true, placement:'bottom' }} />
           </div>
         </div>
       </div>
