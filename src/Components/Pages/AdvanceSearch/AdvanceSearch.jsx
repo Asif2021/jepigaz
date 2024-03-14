@@ -25,6 +25,12 @@ const handleAddComponent = () => {
 const handleLessComponent = ()=>{
   setComponents([CarComponent]) 
 }
+const formatTooltipValue = (value) => {
+  return `${value} $`;
+};
+const formatTooltipValue2 = (value) => {
+  return `${value} km`;
+};
 
 const start = "$ " + value[0];
 const end = "$ " + value[value.length - 1];
@@ -115,7 +121,8 @@ const end2 = value2[value2.length - 1] + " km";
               <InputSelector placeholder="To" className="h-10 w-[48%]" value={end} />
             </div>
             <Slider min={1000} max={5000} range defaultValue={value} 
-            onChange={setValue} tooltip={{ open: true, placement:'bottom' }}  />
+            onChange={setValue} tooltip={{ open: true, placement:'bottom', formatter:formatTooltipValue }} 
+            />
           </div>
 
           <div className="w-full md:w-1/2">
@@ -125,7 +132,7 @@ const end2 = value2[value2.length - 1] + " km";
               <InputSelector placeholder="To" className="h-10 w-[48%]" value={end2} />
             </div>
             <Slider min={0} max={30000} range defaultValue={value2}
-                  onChange={setValue2}  tooltip={{ open: true, placement:'bottom' }} />
+                  onChange={setValue2}  tooltip={{ open: true, placement:'bottom', formatter:formatTooltipValue2 } } />
           </div>
         </div>
       </div>

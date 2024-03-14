@@ -69,6 +69,8 @@ border-color: grey !important;
     color: #000 !important;
     box-shadow: none !important;
     padding: 0 !important;
+    font-weight: bold !important;
+    margin-top: -8px !important;
 }
 .ant-tooltip{
     --antd-arrow-background-color: transparent !important;
