@@ -23,7 +23,7 @@ const handleAddComponent = () => {
   setComponents([...components, CarComponent]) 
 }
 const handleLessComponent = ()=>{
-  setComponents([CarComponent]) 
+  setComponents((item)=>item.slice(0,-1)) 
 }
 const formatTooltipValue = (value) => {
   return `${value} $`;
@@ -68,13 +68,13 @@ const end2 = value2[value2.length - 1] + " km";
        {/* switching add & less buttons on condition */}
           {(components.length===3) ? <AppButton
           onClick={handleLessComponent}
-          // icon={<img src="./icons/plus.svg" alt="Plus" />}
+          icon={<img src="./icons/minus.svg" alt="minus" />}
           text="Less makes/models"
-          className="flex items-center float-end p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/> :
+          className="flex items-center justify-center float-end p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/> :
           (components.length ===2) ? <div>
             <AppButton
           onClick={handleLessComponent}
-          // icon={<img src="./icons/plus.svg" alt="Plus" />}
+          icon={<img src="./icons/minus.svg" alt="minus" />}
           text="Less makes/models"
           className="flex items-center float-end p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
            <AppButton
