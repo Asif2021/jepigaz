@@ -94,6 +94,7 @@ const AdvanceFilter = () => {
           className="showResults h-12 w-full md:w-[32.5%] bg-[#1c819d] font-bold text-[15px]"
           type="primary"
           text="Show results"
+          onClick={()=>navigate("/filter-result")}
         />
       </div>
     </div>

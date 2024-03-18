@@ -5,7 +5,8 @@ import { Footer, Header, Content } from "antd/es/layout/layout";
 import AppFooter from "./Shared/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import Favourites from "./Pages/Favourites/Favourites";
-import AdvanceSearch from "./Pages/AdvanceSearch/AdvanceSearch";
+import AdvanceSearch from "../Components/Pages/Home/AdvanceSearch/AdvanceSearch"
+import FilterResult from "../Components/Pages/Home/FilterResult/FiterResult"
 import Info from "./Pages/Info/Info";
 import Partners from "./Pages/Partners/Partners";
 import { Routes, Route } from "react-router-dom";
@@ -23,6 +24,7 @@ const AppLayout = () => {
           <Route path="/info" element={<Info />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/advance-search" element={<AdvanceSearch />} />
+          <Route path="/filter-result" element={<FilterResult />} />
         </Routes>
       </Content>
       <Footer className="p-0 bg-black md:px-12">

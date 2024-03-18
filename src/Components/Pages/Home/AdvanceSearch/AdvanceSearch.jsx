@@ -1,8 +1,8 @@
 import { Divider, Typography } from "antd";
-import "../../Styles/AdvanceSearch.css";
+import "../../../Styles/AdvanceSearch.css"
 import React, { useState } from "react";
-import AppButton from "../../Reuseable/Button/Button";
-import InputSelector from "../../Reuseable/InputSelector";
+import AppButton from "../../../Reuseable/Button/Button";
+import InputSelector from "../../../Reuseable/InputSelector";
 import { Select } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Slider } from "antd";
@@ -70,24 +70,24 @@ const end2 = value2[value2.length - 1] + " km";
           onClick={handleLessComponent}
           icon={<img src="./icons/minus.svg" alt="minus" />}
           text="Less makes/models"
-          className="flex items-center justify-center float-end p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/> :
+          className="flex items-center justify-center float-end p-0 text-xs md:text-base font-semibold text-[#1c819d] overflow-hidden border-none"/> :
           (components.length ===2) ? <div>
             <AppButton
           onClick={handleLessComponent}
           icon={<img src="./icons/minus.svg" alt="minus" />}
           text="Less makes/models"
-          className="flex items-center float-end p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
+          className="flex items-center float-end p-0 text-xs md:text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
            <AppButton
           onClick={handleAddComponent}
           icon={<img src="./icons/plus.svg" alt="Plus" />}
           text="Add more makes/models"
-          className="flex items-center p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
+          className="flex items-center p-0 text-xs md:text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
           </div> :
           <AppButton
           onClick={handleAddComponent}
           icon={<img src="./icons/plus.svg" alt="Plus" />}
           text="Add more makes/models"
-          className="flex items-center p-0 text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
+          className="flex items-center p-0 text-xs md:text-base font-semibold text-[#1c819d] overflow-hidden border-none"/>
           }
         
         

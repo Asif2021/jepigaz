@@ -1,5 +1,5 @@
 import React from 'react'
-import InputSelector from '../../Reuseable/InputSelector'
+import InputSelector from '../../../Reuseable/InputSelector'
 import { Select } from "antd";
 
 const CarComponent = () => {
