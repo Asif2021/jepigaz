@@ -65,7 +65,7 @@ const end2 = value2[value2.length - 1] + " km";
        {components.slice(0,3).map((item, i) => ( 
         <CarComponent key={i}/> ))}
 
-       {/* switching add & less buttons on condition */}
+       {/* switching add & less buttons through conditional rendring */}
           {(components.length===3) ? <AppButton
           onClick={handleLessComponent}
           icon={<img src="./icons/minus.svg" alt="minus" />}
@@ -116,8 +116,7 @@ const end2 = value2[value2.length - 1] + " km";
           <div className="w-full md:w-1/2">
             <Typography className="uppercase font-bold">price</Typography>
             <div className="flex justify-between">
-              <InputSelector placeholder="From" className="h-10 w-[48%]" value={start}
-           />
+              <InputSelector placeholder="From" className="h-10 w-[48%]" value={start}/>
               <InputSelector placeholder="To" className="h-10 w-[48%]" value={end} />
             </div>
             <Slider min={1000} max={5000} range defaultValue={value} 
