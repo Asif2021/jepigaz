@@ -2,6 +2,8 @@ import React from 'react'
 import {  Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 import FilterData from './FilterData';
+import FilterDataCard from './FilterDataCard';
+import cardata from '../../../../../cardata.json'
 
 
 const FiterResult = () => {
@@ -25,11 +27,17 @@ const FiterResult = () => {
             className="cursor-pointer"
             />
         </div>
-        <div>
+        <div className='flex flex-row gap-3'>
             <div className='hidden md:block md:w-1/3'>
                     <FilterData/>
             </div>
-            <div className='w-full md:w-2/3'></div>
+            <div className='w-full md:w-2/3'>
+              {cardata.map((data)=>{
+                  const {id, title, varient, year, type, milage, priceLowered, price, lowprice, bestPrice, topsearch, imageSource } = data;
+
+                return <FilterDataCard id={id} title={title} varient={varient} year={year} type={type} milage={milage} priceLowered={priceLowered} price={price} lowprice={lowprice} bestPrice={bestPrice} topsearch={topsearch} imageSource={imageSource}/>
+              })}
+            </div>
         </div>
     </div>
   )

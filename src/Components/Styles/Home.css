@@ -39,7 +39,8 @@
    background-color: blue !important;
    width: 8px !important;
 }
- .ant-carousel .slick-dots button{
+
+.mycarousel .ant-carousel .slick-dots button{
    width: 5px !important;
    background-color: white !important;
    color: white !important;
@@ -61,3 +62,17 @@
 .caravan path{
    fill: red !important;
 }
+
+/* show result part css here  */
+
+.FilterDataCardCarousel .ant-carousel .slick-dots button{
+   width: 5px !important;
+   background-color: white !important;
+   color: white !important;
+   opacity: 1 !important;
+   padding: 2px !important;
+    }
+    .FilterDataCardCarousel .ant-carousel .slick-dots li.slick-active button{
+      background-color: blue !important;
+      width: 8px !important;
+   }

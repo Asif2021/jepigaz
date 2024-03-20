@@ -8,11 +8,11 @@ import AdvanceFilterData from './AdvanceFilterData';
 
 const FilterData = () => {
   const [value, setValue] = useState([100, 2500]);
-  const [showmore, setShowmore] = useState(true);
+  const [showmore, setShowmore] = useState(false);
 
   return (
     <div>
-        <div className="flex flex-col gap-3 my-3">
+        <div className="flex flex-col gap-3 mb-3">
             <Typography className='font-bold capitalize'>Filter</Typography>
           <InputSelector placeholder="Make" className="h-10 w-full " />
           <InputSelector placeholder="Model" className="h-10 w-full " />

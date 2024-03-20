@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Carousel, Divider, Flex, Tag, Typography } from "antd";
+import { Carousel, Divider, Tag, Typography } from "antd";
 import Paragraph from "antd/es/typography/Paragraph";
 import AppButton from "./Button/Button";
 
@@ -15,8 +15,7 @@ const CarouselCard = (data) => {
     <>
       <div className="mycarousel relative border border-solid shadow-md rounded-md border-[#E0E6F0] overflow-hidden pb-3">
         <Carousel afterChange={onChange} className="carouselCard cursor-pointer" >
-       
-      {imageSource.map((image) => (
+       {imageSource.map((image) => (
         <div key={id}>
           <img src={image} alt={image}  className="flex w-full" />
         </div>
