@@ -1,9 +1,10 @@
 import React from 'react'
-import {  Typography } from "antd";
+import {  Pagination, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 import FilterData from './FilterData';
 import FilterDataCard from './FilterDataCard';
 import cardata from '../../../../../cardata.json'
+import AppButton from '../../../Reuseable/Button/Button';
 
 
 const FiterResult = () => {
@@ -28,15 +29,18 @@ const FiterResult = () => {
             />
         </div>
         <div className='flex flex-row gap-3'>
-            <div className='hidden md:block md:w-1/3'>
+            <div className='hidden md:block w-[25%]'>
                     <FilterData/>
             </div>
-            <div className='w-full md:w-2/3'>
+            <div className='w-full md:w-[75%]'>
               {cardata.map((data)=>{
                   const {id, title, varient, year, type, milage, priceLowered, price, lowprice, bestPrice, topsearch, imageSource } = data;
 
                 return <FilterDataCard id={id} title={title} varient={varient} year={year} type={type} milage={milage} priceLowered={priceLowered} price={price} lowprice={lowprice} bestPrice={bestPrice} topsearch={topsearch} imageSource={imageSource}/>
               })}
+              <div className='flex justify-end'>
+                     <Pagination defaultCurrent={1} total={10}/> 
+              </div>
             </div>
         </div>
     </div>

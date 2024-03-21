@@ -6,6 +6,7 @@ import AppButton from '../../../Reuseable/Button/Button';
 import AdvanceFilterData from './AdvanceFilterData';
 
 
+
 const FilterData = () => {
   const [value, setValue] = useState([100, 2500]);
   const [showmore, setShowmore] = useState(false);

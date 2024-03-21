@@ -30,9 +30,6 @@
 .showAllLink:hover{
    color: #1c819d !important;
 }
-/* .mostWanted .ant-btn.ant-btn-icon-only{
-   width: 180% !important;
-} */
 
 /* carousel section css here --> */
 .mycarousel .ant-carousel .slick-dots li.slick-active button{
@@ -48,7 +45,7 @@
    padding: 2px !important;
     }
 
-  .mycarousel .ant-carousel .slick-dots li {
+.mycarousel .ant-carousel .slick-dots li {
    width: 2px !important;
 }
 
@@ -71,8 +68,11 @@
    color: white !important;
    opacity: 1 !important;
    padding: 2px !important;
-    }
+}
     .FilterDataCardCarousel .ant-carousel .slick-dots li.slick-active button{
       background-color: blue !important;
       width: 8px !important;
+   }
+   .FilterDataCardCarousel .ant-carousel .slick-dots li {
+      width: 2px !important;
    }
