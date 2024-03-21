@@ -41,16 +41,16 @@ const FilterDataCard = (data) => {
                     <Typography className="font-bold text-xs md:text-lg"> ${price}</Typography>
                     <div className="flex flex-row">
                       {heartFilled ? (<span className="bg-transparent-65 w-6 md:w-8 rounded-full h-6 md:h-8  flex justify-center items-center">
-                        <img src="./icons/heartfilled.svg" alt="heart" className="w-5 md:w-6" onClick={() => setHeartFilled(!heartFilled)}/></span>) :
-                        (<span className="bg-slate-700 bg-opacity-65 h-6 md:h-8 w-6 md:w-8 rounded-full flex justify-center items-center"> <img src="./icons/heart.svg"
+                        <img src="./icons/heartfilled2.svg" alt="heart" className="w-5 md:w-6" onClick={() => setHeartFilled(!heartFilled)}/></span>) :
+                        (<span className="h-6 md:h-8 w-6 md:w-8 rounded-full flex justify-center items-center"> <img src="./icons/heart-2.svg"
                             alt="heart" className="w-5 md:w-6"
                             onClick={() => setHeartFilled(!heartFilled)}
                           />
                         </span>
                       )}
 
-                    <span className="bg-slate-700 bg-opacity-65 rounded-full h-6 md:h-8 w-6 md:w-8 flex justify-center items-center">
-                      <img src="./icons/share-2.svg" className="w-5 md:w-6" alt="share" />
+                    <span className="rounded-full h-6 md:h-8 w-6 md:w-8 flex justify-center items-center">
+                      <img src="./icons/share.svg" className="w-5 md:w-6" alt="share" />
                     </span>
                 </div>
              </div>
